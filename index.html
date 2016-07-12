@@ -248,6 +248,139 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/12/set容器/" itemprop="url">
+                  set容器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-12T16:23:10+08:00" content="2016-07-12">
+              2016-07-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>set集合容器：实现了红黑树的平衡二叉检索树的数据结构，插入元素时，它会自动调整二叉树的排列，把元素放到适当的位置，以保证每个子树根节点键值大于左子树所有节点的键值，小于右子树所有节点的键值；另外，还得保证根节点左子树的高度与右子树高度相等。
+</code></pre><p>　　平衡二叉检索树使用中序遍历算法，检索效率高于vector、deque和list等容器，另外使用中序遍历可将键值按照从小到大遍历出来。</p>
+<p>　　构造set集合主要目的是为了快速检索，不可直接去修改键值。</p>
+<hr>
+<p>　　常用操作：</p>
+<p>　　1.元素插入：insert（）</p>
+<p>　　2.中序遍历：类似vector遍历（用迭代器）</p>
+<p>　　3.反向遍历：利用反向迭代器reverse_iterator.</p>
+<p>　　例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">set&lt;int&gt; s;</div><div class="line"></div><div class="line">set&lt;int&gt;::reverse_iterator rit;</div><div class="line"></div><div class="line">for（rit=s.rbegin（）；rit!=s.rend（）；rit++）</div></pre></td></tr></table></figure>
+<p>　　4.元素删除：与插入一样，可以高效的删除，并自动调整使红黑树平衡。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">set&lt;int&gt; s;</div><div class="line"></div><div class="line">s.erase（2）；        //删除键值为2的元素</div><div class="line"></div><div class="line">s.clear（）；</div></pre></td></tr></table></figure>
+<p>　　5.元素检索：find（），若找到，返回该键值迭代器的位置，否则，返回最后一个元素后面一个位置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">set&lt;int&gt; s;</div><div class="line"></div><div class="line">set&lt;int&gt;::iterator it;</div><div class="line"></div><div class="line">it=s.find（5）；    //查找键值为5的元素</div><div class="line"></div><div class="line">if（it!=s.end（））    //找到</div><div class="line"></div><div class="line">cout《*it《endl;</div><div class="line"></div><div class="line">else            //未找到</div><div class="line"></div><div class="line">cout《&quot;未找到&quot;;</div></pre></td></tr></table></figure>
+<p>　　6.自定义比较函数</p>
+<p>　　（1）元素不是结构体：</p>
+<p>　　例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">//自定义比较函数myComp,重载&quot;（）&quot;操作符</div><div class="line"></div><div class="line">struct myComp</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">    bool operator（）（const your_type &amp;a,const your_type &amp;b）</div><div class="line"></div><div class="line">    &#123;</div><div class="line"></div><div class="line">　　      return a.data-b.data&gt;0;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">set&lt;int,myComp&gt;s;</div><div class="line"></div><div class="line">set&lt;int,myComp&gt;::iterator it;</div></pre></td></tr></table></figure>
+<p>　　（2）如果元素是结构体，可以直接将比较函数写在结构体内。</p>
+<p>　　例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">struct Info</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">　　string name;</div><div class="line"></div><div class="line">　　float score;</div><div class="line"></div><div class="line">　　//重载&quot;&lt;&quot;操作符，自定义排序规则</div><div class="line"></div><div class="line">　　bool operator &lt; （const Info &amp;a） const</div><div class="line"></div><div class="line">　　&#123;</div><div class="line"></div><div class="line">　　//按score从大到小排列</div><div class="line"></div><div class="line">　　return a.score&lt;score;</div><div class="line"></div><div class="line">　　&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">set&lt;Info&gt; s;</div><div class="line"></div><div class="line">set&lt;Info&gt;::iterator it;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/12/HDU-2034-人见人爱A-B/" itemprop="url">
                   HDU 2034.人见人爱A-B
                 </a>
@@ -503,7 +636,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -511,7 +644,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -520,7 +653,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

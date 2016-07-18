@@ -85,39 +85,21 @@
 
 
 <meta name="description" content="题目
-Description
-还记得中学时候学过的杨辉三角吗？具体的定义这里不再描述，你可以参考以下的图形：11 11 2 11 3 3 11 4 6 4 11 5 10 10 5 1
 
-Input
-输入数据包含多个测试实例，每个测试实例的输入只包含一个正整数n（1&amp;lt;=n&amp;lt;=30），表示将要输出的杨辉三角的层数。
-
-Output
-对应于每一个输入，请输出相应层数的杨辉三角，每一层的整数">
+Problem Description把一个偶数拆成两个不同素数的和，有几种拆法呢？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HDU 2032.杨辉三角">
-<meta property="og:url" content="http://yoursite.com/2016/07/13/HDU-2032-杨辉三角/index.html">
+<meta property="og:title" content="HDU 2098.分拆素数和">
+<meta property="og:url" content="http://yoursite.com/2016/07/18/HDU-2098-分拆素数和/index.html">
 <meta property="og:site_name" content="RocSama's Blog">
 <meta property="og:description" content="题目
-Description
-还记得中学时候学过的杨辉三角吗？具体的定义这里不再描述，你可以参考以下的图形：11 11 2 11 3 3 11 4 6 4 11 5 10 10 5 1
 
-Input
-输入数据包含多个测试实例，每个测试实例的输入只包含一个正整数n（1&amp;lt;=n&amp;lt;=30），表示将要输出的杨辉三角的层数。
-
-Output
-对应于每一个输入，请输出相应层数的杨辉三角，每一层的整数">
-<meta property="og:updated_time" content="2016-07-13T14:50:28.911Z">
+Problem Description把一个偶数拆成两个不同素数的和，有几种拆法呢？">
+<meta property="og:updated_time" content="2016-07-18T03:19:42.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDU 2032.杨辉三角">
+<meta name="twitter:title" content="HDU 2098.分拆素数和">
 <meta name="twitter:description" content="题目
-Description
-还记得中学时候学过的杨辉三角吗？具体的定义这里不再描述，你可以参考以下的图形：11 11 2 11 3 3 11 4 6 4 11 5 10 10 5 1
 
-Input
-输入数据包含多个测试实例，每个测试实例的输入只包含一个正整数n（1&amp;lt;=n&amp;lt;=30），表示将要输出的杨辉三角的层数。
-
-Output
-对应于每一个输入，请输出相应层数的杨辉三角，每一层的整数">
+Problem Description把一个偶数拆成两个不同素数的和，有几种拆法呢？">
 
 
 
@@ -138,9 +120,9 @@ Output
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/13/HDU-2032-杨辉三角/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/18/HDU-2098-分拆素数和/"/>
 
-  <title> HDU 2032.杨辉三角 | RocSama's Blog </title>
+  <title> HDU 2098.分拆素数和 | RocSama's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,7 +252,7 @@ Output
             
             
               
-                HDU 2032.杨辉三角
+                HDU 2098.分拆素数和
               
             
           </h1>
@@ -282,8 +264,8 @@ Output
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-13T17:39:10+08:00" content="2016-07-13">
-              2016-07-13
+            <time itemprop="dateCreated" datetime="2016-07-18T11:16:54+08:00" content="2016-07-18">
+              2016-07-18
             </time>
           </span>
 
@@ -330,26 +312,25 @@ Output
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><blockquote>
-<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><blockquote>
-<p>还记得中学时候学过的杨辉三角吗？具体的定义这里不再描述，你可以参考以下的图形：<br>1<br>1 1<br>1 2 1<br>1 3 3 1<br>1 4 6 4 1<br>1 5 10 10 5 1</p>
+<blockquote>
+<p>Problem Description<br>把一个偶数拆成两个不同素数的和，有几种拆法呢？  </p>
+<a id="more"></a>  
 </blockquote>
 <h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><blockquote>
-<p>输入数据包含多个测试实例，每个测试实例的输入只包含一个正整数n（1&lt;=n&lt;=30），表示将要输出的杨辉三角的层数。</p>
+<p>输入包含一些正的偶数，其值不会超过10000，个数不会超过500，若遇0，则结束。  </p>
 </blockquote>
 <h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><blockquote>
-<p>对应于每一个输入，请输出相应层数的杨辉三角，每一层的整数之间用一个空格隔开，每一个杨辉三角后面加一个空行。</p>
+<p>对应每个偶数，输出其拆成不同素数的个数，每个结果占一行。  </p>
 </blockquote>
 <h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><blockquote>
-<p>2 3</p>
+<p>30<br>26<br>0  </p>
 </blockquote>
 <h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><blockquote>
-<p>1<br>1 1</p>
-<p>1<br>1 1<br>1 2 1</p>
+<p>3<br>2  </p>
 </blockquote>
 </blockquote>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><pre><code>先初始化，将1~30层的杨辉三角全部都求出来，然后再直接输入调用即可。
-</code></pre><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">#include&lt;stdio.h&gt;</div><div class="line">#define maxn 31</div><div class="line"></div><div class="line">int num[maxn][maxn];</div><div class="line"></div><div class="line">void Do()//初始化1~30层的杨辉三角</div><div class="line">&#123;</div><div class="line">        num[1][1]=1;</div><div class="line">        for(int i=2;i&lt;=30;i++)</div><div class="line">        &#123;</div><div class="line">                for(int j=1;j&lt;=i;j++)</div><div class="line">                &#123;</div><div class="line">                        if(j==1||j==i) num[i][j]=1;</div><div class="line">                        else</div><div class="line">                        &#123;</div><div class="line">                                num[i][j]=num[i-1][j-1]+num[i-1][j];//杨辉三角的性质</div><div class="line">                        &#125;</div><div class="line">                &#125;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">        Do();//调用函数</div><div class="line">        int n;</div><div class="line">        while(scanf(&quot;%d&quot;,&amp;n)!=EOF)</div><div class="line">        &#123;</div><div class="line">                for(int i=1;i&lt;=n;i++)</div><div class="line">                &#123;</div><div class="line">                        for(int j=1;j&lt;=i;j++)</div><div class="line">                        &#123;</div><div class="line">                                printf(&quot;%d&quot;,num[i][j]);</div><div class="line">                                if(i!=j) printf(&quot; &quot;);//每行的最后一个数据没有空格</div><div class="line">                        &#125;</div><div class="line">                        printf(&quot;\n&quot;);//每层之间的换行</div><div class="line">                &#125;</div><div class="line">                printf(&quot;\n&quot;);//每组数据之间的空行</div><div class="line">        &#125;</div><div class="line">        return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><pre><code>关键点在判断拆分的两个数是否为素数
+</code></pre><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">#include&lt;stdio.h&gt;</div><div class="line"></div><div class="line">bool jud(int n)//判断n是否为素数</div><div class="line">&#123;</div><div class="line">        for(int i=2;i&lt;=n/2;i++)</div><div class="line">        &#123;</div><div class="line">                if(n%i==0) return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">        int n;</div><div class="line">        while(scanf(&quot;%d&quot;,&amp;n)&amp;&amp;n)</div><div class="line">        &#123;</div><div class="line">                int cou=0;</div><div class="line">                for(int i=2;i&lt;=n/2;i++)//由于对称，拆分到n/2即可</div><div class="line">                &#123;</div><div class="line">                        if(jud(i)&amp;&amp;jud(n-i)&amp;&amp;i!=n-i) cou++;//判断拆分的两个数是否为素数</div><div class="line">                &#125;</div><div class="line">                printf(&quot;%d\n&quot;,cou);</div><div class="line">        &#125;</div><div class="line">        return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -380,17 +361,13 @@ Output
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/12/HDU-2035-人见人爱A-B/" rel="next" title="HDU 2035.人见人爱A^B">
-                <i class="fa fa-chevron-left"></i> HDU 2035.人见人爱A^B
+              <a href="/2016/07/18/HDU-2096-小明A-B/" rel="next" title="HDU 2096.小明A+B">
+                <i class="fa fa-chevron-left"></i> HDU 2096.小明A+B
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/13/HDU-2030-汉字统计/" rel="prev" title="HDU 2030.汉字统计">
-                HDU 2030.汉字统计 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -504,7 +481,7 @@ Output
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-number">1.2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-number">1.3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Input"><span class="nav-number">1.4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Output"><span class="nav-number">1.5.</span> <span class="nav-text">Sample Output</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-number">1.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-number">1.2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Input"><span class="nav-number">1.3.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Output"><span class="nav-number">1.4.</span> <span class="nav-text">Sample Output</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
           </div>
         </section>
